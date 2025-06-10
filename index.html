@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Twemoji Picker</title>
+    <script src="./twemoji_picker.min.js"></script>
+
+    <style type="text/css">
+        :root {
+            --background: #f4f4f4;
+            --darker_background: #fff;
+            --text: #727272bd;
+            --light_text: #000;
+        }
+
+        *,
+        *:before,
+        *:after {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            line-height: normal
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-decoration-thickness: 2px;
+        }
+
+        *:focus:not(input, select) {
+            outline: 0;
+            box-shadow:
+                0 0 0 .2rem var(--lighter_background),
+                0 0 0 .35rem var(--primary_color);
+        }
+
+        *:focus:not(:focus-visible) {
+            outline: 0;
+            box-shadow: none;
+        }
+
+        body {
+            background: #fcfcfc;
+            font-family: sans-serif;
+            color: #303030
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            background: #343434;
+            border-bottom: 4px solid #7dc242;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            color: #fefefe;
+        }
+
+        .header h2 {
+            font-size: 34px;
+            margin-top: -12px;
+        }
+
+        .header h4 {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 135%;
+            margin: 15px 0;
+            color: #f0f0f0;
+        }
+
+        .header h4 a {
+            color: #cfcfcf;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .content form {
+            border: 12px solid #f8f8f8;
+            background: #f4f4f4;
+            padding: 45px;
+            margin: 70px auto 40px;
+            border-radius: 5px;
+            max-width: 900px;
+            box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
+        }
+
+        .content input,
+        .content textarea {
+            width: 100%;
+            background: #fff;
+            border: 2px solid #ccc;
+            border-radius: 2px;
+            padding: 8px 10px;
+            border-radius: 2px;
+            font-size: 100%;
+            transition: all .2s ease;
+        }
+
+        .content input:hover,
+        .content textarea:hover,
+        .content input:active,
+        .content textarea:active,
+        .content input:focus,
+        .content textarea:focus {
+            border: 2px solid rgba(125, 194, 66, 0.8);
+        }
+
+        .content label {
+            display: block;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+            color: #666;
+            text-shadow: 0 0 0 #666;
+            padding: 5px 0 8px;
+        }
+
+        .content label:not(:first-of-type) {
+            margin-top: 30px;
+        }
+    </style>
+
+    <script>
+        new twemoji_picker('textarea, input');
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>
+                Twemoji Picker
+            </h2>
+            <h4>Made by <a href="https://github.com/bribes" target="_blank">Faav</a> | Fork of LC Emoji Picker by <a
+                    href="https://lcweb.it" target="_blank">LCweb</a></h4>
+        </div>
+        <div class="content">
+            <form>
+                <label>On a simple text field</label>
+                <input type="text" name="the-input" />
+
+                <label>On a textarea!</label>
+                <textarea name="the-textarea"></textarea>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
